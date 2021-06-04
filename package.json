@@ -1,0 +1,27 @@
+{
+  "name": "node-red-contrib-untapped-api",
+  "version": "1.0.0",
+  "description": "node-red-contrib-untapped-api",
+  "main": "index.js",
+  "node-red": {
+    "nodes": {
+        "untapped-api": "untapped-api.js",
+        "untapped-api-setting": "untapped-api-setting.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-red":"node-red -u ../../../node-red_dir -p 18801"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1ft-seabass/node-red-contrib-untapped-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1ft-seabass/node-red-contrib-untapped-api/issues"
+  },
+  "homepage": "https://github.com/1ft-seabass/node-red-contrib-untapped-api#readme"
+}
