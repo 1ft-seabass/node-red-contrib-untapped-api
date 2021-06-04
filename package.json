@@ -5,8 +5,7 @@
   "main": "index.js",
   "node-red": {
     "nodes": {
-        "untapped-api": "untapped-api.js",
-        "untapped-api-setting": "untapped-api-setting.js"
+        "untapped-api": "untapped-api.js"
     }
   },
   "scripts": {

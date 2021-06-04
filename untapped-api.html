@@ -1,0 +1,74 @@
+<script type="text/javascript">
+  RED.nodes.registerType('untapped-api-config', {
+    category: 'config',
+    defaults: {
+      name: { value: "" },
+      value1: { value: "" }
+    },
+    label: function () {
+      return this.name || "Untapped API";
+    },
+    credentials: {
+      apitoken: { type: "text" },
+      password: { type: "password" }
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="untapped-api-config">
+
+  <div class="form-row">
+    <label for="node-config-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-config-input-name" placeholder="Name">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-value1"><i class="icon-tag"></i> Value1</label>
+    <input type="text" id="node-config-input-value1" placeholder="Value1">
+  </div>
+
+
+  <div class="form-row">
+    <label for="node-config-input-apitoken"><i class="icon-tag"></i> API Token</label>
+    <input type="text" id="node-config-input-apitoken">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-password"><i class="icon-tag"></i> Password</label>
+    <input type="password" id="node-config-input-password">
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('untapped-api', {
+    category: 'sample',
+    color: '#E9967A',
+    defaults: {
+      name: { value: "" },
+      setting: { value: "", type: "untapped-api-config" }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "arrow-in.png",
+    label: function () {
+      return this.name || "cred add setting";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="untapped-api">
+  
+    <div class="form-row">
+      <label for="node-input-apitoken"><i class="icon-tag"></i> Setting</label>
+      <input type="text" id="node-input-setting">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="untapped-api">
+    <p>Cred Add Setting</p>
+</script>
